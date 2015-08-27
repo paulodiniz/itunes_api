@@ -8,6 +8,10 @@ gem 'rails', '3.2.21'
 
 gem 'rails-api'
 
+group :development do
+  gem 'pry'
+end
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end

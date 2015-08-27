@@ -1,4 +1,12 @@
 ItunesApi::Application.routes.draw do
+
+  get '/top/:category_id/:monetization' => 'app#top'
+
+  # resource :apps do
+  #   collection do
+  #     get 'top'
+  #   end
+  # end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
