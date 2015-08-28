@@ -38,6 +38,8 @@ class Itunes
     case @monetization
     when :paid
       0
+    when :free
+      1
     end
   end
 end
