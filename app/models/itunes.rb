@@ -10,7 +10,7 @@ class Itunes
   end
 
   def query
-    @query ||= { genreId: @category_id}
+    @query ||= { genreId: @category_id, popId: 30, dataOnly: true, l: 'en'}
   end
 
   def top_apps

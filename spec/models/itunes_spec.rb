@@ -15,7 +15,7 @@ RSpec.describe 'Itunes', :type => :model do
   describe '#query' do
     it 'must return a hash with the correct params' do
       itunes = Itunes.new(category_id: 6003, monetization: :wtv)
-      expect(itunes.query).to eql({ genreId: 6003})
+      expect(itunes.query).to eql({ genreId: 6003, popId: 30, dataOnly: true, l: 'en' })
     end
   end
 
