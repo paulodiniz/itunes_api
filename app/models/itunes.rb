@@ -7,8 +7,10 @@ class Itunes
   def initialize(opts = {})
     @category_id  = opts[:category_id]
     @monetization = opts[:monetization]
+  end
 
-    @options = { query: { genreId: @category_id}}
+  def query
+    @query ||= { genreId: @category_id}
   end
 
   def top_apps

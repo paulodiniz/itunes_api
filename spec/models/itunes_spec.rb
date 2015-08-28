@@ -12,6 +12,13 @@ RSpec.describe 'Itunes', :type => :model do
     end
   end
 
+  describe '#query' do
+    it 'must return a hash with the correct params' do
+      itunes = Itunes.new(category_id: 6003, monetization: :wtv)
+      expect(itunes.query).to eql({ genreId: 6003})
+    end
+  end
+
   describe '#top_apps' do
     it 'must return ' do
     end
