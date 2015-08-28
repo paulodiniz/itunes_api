@@ -40,6 +40,8 @@ class Itunes
       0
     when :free
       1
+    when :grossing
+      2
     end
   end
 end
