@@ -35,6 +35,10 @@ RSpec.describe 'Itunes', :type => :model do
 
   describe '#top_apps' do
     it 'must return ' do
+      VCR.use_cassette 'top_6002' do
+        itunes = Itunes.new(category_id: 6003, monetization: :wtv)
+        itunes.top_apps
+      end
     end
   end
 end
