@@ -10,7 +10,6 @@ RSpec.describe AppController, :type => :controller do
         json_response = JSON.parse(response.body)
         expect(json_response.count).to eql 200
       end
-
     end
   end
 end
