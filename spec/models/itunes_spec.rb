@@ -34,10 +34,14 @@ RSpec.describe 'Itunes', :type => :model do
   end
 
   describe '#top_apps' do
+
     it 'must return ' do
       VCR.use_cassette 'top_6002' do
-        itunes = Itunes.new(category_id: 6003, monetization: :wtv)
-        itunes.top_apps
+        itunes = Itunes.new(category_id: 6003, monetization: :paid)
+        paid_apps_ids = itunes.top_apps
+        expect(paid_apps_ids.first).to eql  "382069612"
+        expect(paid_apps_ids.second).to eql "545498325"
+        expect(paid_apps_ids.last).to eql   "933640114"
       end
     end
   end

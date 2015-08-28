@@ -30,6 +30,14 @@ class Itunes
   end
 
   def top_apps
-    self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)
+    self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)["topCharts"][monetization_id]["adamIds"]
+  end
+
+  private
+  def monetization_id
+    case @monetization
+    when :paid
+      0
+    end
   end
 end
