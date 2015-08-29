@@ -17,7 +17,7 @@ class AppData
                 "description",
                 "artworkUrl60",
                 "sellerName",
-                "price",  
+                "price",
                 "version",
                 "averageUserRating")
   end
