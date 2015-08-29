@@ -35,8 +35,6 @@ RSpec.describe 'Itunes', :type => :model do
 
   describe '#top_apps' do
 
-    let(:first_free_6003) { { "382069612" => {} }}
-
     it 'must return all of the ids' do
       VCR.use_cassette 'top_paid_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :paid)
