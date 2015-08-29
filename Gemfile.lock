@@ -129,6 +129,3 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   vcr
   webmock
-
-BUNDLED WITH
-   1.10.6
