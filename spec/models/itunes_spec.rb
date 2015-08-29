@@ -45,17 +45,19 @@ RSpec.describe 'Itunes', :type => :model do
       end
     end
 
-    it 'must' do
+    it 'must return the free apps' do
       VCR.use_cassette 'top_free_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :free)
         free_apps = itunes.top_apps
         expect(free_apps.first.keys[0]).to eql  ("368677368")
         expect(free_apps.second.keys[0]).to eql ("284910350")
         expect(free_apps.last.keys[0]).to eql   ("391968627")
+
+        first_app = free_apps.first["368677368"]
       end
     end
 
-    it 'must' do
+    it 'must return the grossing apps' do
       VCR.use_cassette 'top_grossing_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :grossing)
         grossing_apps = itunes.top_apps
