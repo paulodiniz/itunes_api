@@ -30,10 +30,19 @@ class Itunes
   end
 
   def top_apps
-    self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)["topCharts"][monetization_id]["adamIds"]
+    top_apps_ids.map { |app_id| Hash[app_id, AppData.new(app_id).metadata] }
   end
 
   private
+
+  def top_apps_ids
+    itunes_response["topCharts"][monetization_id]["adamIds"]
+  end
+
+  def itunes_response
+    self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)
+  end
+
   def monetization_id
     case @monetization
     when :paid
