@@ -10,6 +10,7 @@ RSpec.describe 'Itunes', :type => :model do
       expect(itunes.category_id).to eql 6002
       expect(itunes.monetization).to eql :free
     end
+
   end
 
   describe '#query' do
@@ -64,6 +65,16 @@ RSpec.describe 'Itunes', :type => :model do
         expect(grossing_apps.first.keys[0]).to eql  ("382069612")
         expect(grossing_apps.second.keys[0]).to eql ("405075943")
         expect(grossing_apps.last.keys[0]).to eql   ("323241807")
+      end
+    end
+  end
+
+  describe '#on_rank' do
+    it 'must return only one app description' do
+      itunes = Itunes.new(category_id: 6003, monetization: :free)
+      VCR.use_cassette 'top_free_6003' do
+        first = itunes.on_rank(1)
+        expect(first).to be_a Hash
       end
     end
   end

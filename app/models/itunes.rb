@@ -36,8 +36,12 @@ class Itunes
     return result
   end
 
-  private
+  def on_rank(rank = 1)
+    app = top_apps_ids[rank - 1]
+    return AppData.for(app)
+  end
 
+  private
 
   def cache_key
     "top-#{@category_id}-#{@monetization}"

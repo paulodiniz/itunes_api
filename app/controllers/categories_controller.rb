@@ -5,6 +5,7 @@ class CategoriesController < ApplicationController
   end
 
   def rank
+    render json: itunes_api_client.on_rank(params[:rank].to_i), status: :ok
   end
 
   private
