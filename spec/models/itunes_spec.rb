@@ -41,9 +41,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_paid_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :paid)
         paid_apps = itunes.top_apps
-        expect(paid_apps.first).to eql  ({ "382069612" => {} })
-        expect(paid_apps.second).to eql ({ "545498325" => {} })
-        expect(paid_apps.last).to eql   ({ "733830283" => {} })
+        expect(paid_apps.first.keys[0]).to eql  ("382069612")
+        expect(paid_apps.second.keys[0]).to eql ("545498325")
+        expect(paid_apps.last.keys[0]).to eql   ("733830283")
       end
     end
 
@@ -51,9 +51,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_free_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :free)
         free_apps = itunes.top_apps
-        expect(free_apps.first).to eql  ({ "368677368" => {} })
-        expect(free_apps.second).to eql ({ "284910350" => {} })
-        expect(free_apps.last).to eql   ({ "474259675" => {} })
+        expect(free_apps.first.keys[0]).to eql  ("368677368")
+        expect(free_apps.second.keys[0]).to eql ("284910350")
+        expect(free_apps.last.keys[0]).to eql   ("391968627")
       end
     end
 
@@ -61,9 +61,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_grossing_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :grossing)
         grossing_apps = itunes.top_apps
-        expect(grossing_apps.first).to eql  ({ "382069612" => {} })
-        expect(grossing_apps.second).to eql ({ "405075943" => {} })
-        expect(grossing_apps.last).to eql   ({ "548248249" => {} })
+        expect(grossing_apps.first.keys[0]).to eql  ("382069612")
+        expect(grossing_apps.second.keys[0]).to eql ("405075943")
+        expect(grossing_apps.last.keys[0]).to eql   ("323241807")
       end
     end
   end
