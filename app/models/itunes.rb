@@ -30,7 +30,7 @@ class Itunes
   end
 
   def top_apps
-    top_apps_ids.map { |app_id| Hash[app_id, AppData.new(app_id).metadata] }
+    top_apps_ids.map { |app_id| Hash[app_id, AppData.for(app_id)] }
   end
 
   private
