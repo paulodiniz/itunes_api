@@ -30,10 +30,22 @@ class Itunes
   end
 
   def top_apps
-    top_apps_ids.map { |app_id| Hash[app_id, AppData.for(app_id)] }
+    return cache_value if cache_value
+    result = top_apps_ids.map { |app_id| Hash[app_id, AppData.for(app_id)] }
+    Rails.cache.write(cache_key, result)
+    return result
   end
 
   private
+
+
+  def cache_key
+    "top-#{@category_id}-#{@monetization}"
+  end
+
+  def cache_value
+    Rails.cache.read(cache_key)
+  end
 
   def top_apps_ids
     itunes_response["topCharts"][monetization_id]["adamIds"]
