@@ -1,6 +1,9 @@
 ItunesApi::Application.routes.draw do
 
-  get '/categories/:category_id/top/:monetization' => 'categories#top'
-  get '/categories/:category_id/rank/:monetization/:rank' => 'categories#rank'
-
+  resources :categories do
+    member do
+      get 'top/:monetization' => 'categories#top'
+      get 'rank/:monetization' => 'categories#rank'
+    end
+  end
 end
