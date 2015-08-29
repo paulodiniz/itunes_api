@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
   private
   def itunes_api_client
     Itunes.new({
-      category_id:  params[:category_id], 
+      category_id:  params[:id], 
       monetization: params[:monetization].to_sym
     })
   end
