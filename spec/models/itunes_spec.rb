@@ -40,9 +40,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_paid_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :paid)
         paid_apps = itunes.top_apps
-        expect(paid_apps.first.keys[0]).to eql  ("382069612")
-        expect(paid_apps.second.keys[0]).to eql ("545498325")
-        expect(paid_apps.last.keys[0]).to eql   ("733830283")
+        expect(paid_apps.first["sellerName"]).to eql  "Flightradar24 AB"
+        expect(paid_apps.second["sellerName"]).to eql "Xco Software LLC"
+        expect(paid_apps.last["sellerName"]).to eql   "TripBucket Inc"
       end
     end
 
@@ -50,9 +50,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_free_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :free)
         free_apps = itunes.top_apps
-        expect(free_apps.first.keys[0]).to eql  ("368677368")
-        expect(free_apps.second.keys[0]).to eql ("284910350")
-        expect(free_apps.last.keys[0]).to eql   ("391968627")
+        expect(free_apps.first["sellerName"]).to eql  "Uber Technologies, Inc."
+        expect(free_apps.second["sellerName"]).to eql "Yelp, Inc."
+        expect(free_apps.last["sellerName"]).to eql   "AIR FRANCE"
 
         first_app = free_apps.first["368677368"]
       end
@@ -62,9 +62,9 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_grossing_6003' do
         itunes = Itunes.new(category_id: 6003, monetization: :grossing)
         grossing_apps = itunes.top_apps
-        expect(grossing_apps.first.keys[0]).to eql  ("382069612")
-        expect(grossing_apps.second.keys[0]).to eql ("405075943")
-        expect(grossing_apps.last.keys[0]).to eql   ("323241807")
+        expect(grossing_apps.first["sellerName"]).to eql  "Flightradar24 AB"
+        expect(grossing_apps.second["sellerName"]).to eql "AllTrails, Inc."
+        expect(grossing_apps.last["sellerName"]).to eql   "medianet"
       end
     end
   end
@@ -75,6 +75,15 @@ RSpec.describe 'Itunes', :type => :model do
       VCR.use_cassette 'top_free_6003' do
         first = itunes.on_rank(1)
         expect(first).to be_a Hash
+      end
+    end
+  end
+
+  describe '#top_publishers' do
+    it '' do
+      itunes = Itunes.new(category_id: 6003, monetization: :free)
+      VCR.use_cassette 'top_free_6003' do
+        # itunes.top_publishers
       end
     end
   end

@@ -8,6 +8,10 @@ class CategoriesController < ApplicationController
     render json: itunes_api_client.on_rank(params[:rank].to_i), status: :ok
   end
 
+  def publishers
+    render json: itunes_api_client.top_publishers, status: :ok
+  end
+
   private
   def itunes_api_client
     Itunes.new({

@@ -31,7 +31,7 @@ class Itunes
 
   def top_apps
     return cache_value if cache_value
-    result = top_apps_ids.map { |app_id| Hash[app_id, AppData.for(app_id)] }
+    result = top_apps_ids.map { |app_id| AppData.for(app_id) }
     Rails.cache.write(cache_key, result)
     return result
   end
@@ -39,6 +39,11 @@ class Itunes
   def on_rank(rank = 1)
     app = top_apps_ids[rank - 1]
     return AppData.for(app)
+  end
+
+  def top_publishers
+    top_apps.map do |app|
+    end
   end
 
   private
