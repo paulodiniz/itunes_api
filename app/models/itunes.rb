@@ -55,7 +55,7 @@ class Itunes
       publishers_count[artist_id] = 0 if publishers_count[artist_id].nil?
       publishers_count[artist_id] += 1
     end
-    publishers_count
+    publishers_count.sort_by { |k,v| v}.reverse
   end
 
   private
