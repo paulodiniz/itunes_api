@@ -41,9 +41,21 @@ class Itunes
     return AppData.for(app)
   end
 
+
   def top_publishers
-    top_apps.map do |app|
+    top_publishers_count.map do |artist_id, number_of_apps|
+      AppData.for(artist_id).merge("numberOfApps" => number_of_apps)
     end
+  end
+
+  def top_publishers_count
+    publishers_count = {}
+    top_apps.each do |app|
+      artist_id = app["artistId"]
+      publishers_count[artist_id] = 0 if publishers_count[artist_id].nil?
+      publishers_count[artist_id] += 1
+    end
+    publishers_count
   end
 
   private

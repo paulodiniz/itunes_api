@@ -80,11 +80,20 @@ RSpec.describe 'Itunes', :type => :model do
   end
 
   describe '#top_publishers' do
-    it '' do
+
+    let(:fake_data) do
+      [{ "version" => 2, "artistId" => '501285606' },
+      { "version" => 3, "artistId" => '368677371' },
+      { "version" => 6, "artistId" => '501285606' }]
+    end
+
+    it 'must agregate by sellerName' do
       itunes = Itunes.new(category_id: 6003, monetization: :free)
-      VCR.use_cassette 'top_free_6003' do
-        # itunes.top_publishers
-      end
+      allow(itunes).to receive(:top_apps).and_return fake_data
+      response = itunes.top_publishers
+      
+      expect(response.first["numberOfApps"]).to eql 2
+      expect(response.second["numberOfApps"]).to eql 1
     end
   end
 end
