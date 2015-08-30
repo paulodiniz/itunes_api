@@ -5,13 +5,6 @@ class AppData
   def self.for(app_id)
     response = get('/lookup', {query: {id: app_id }})
     response_body = JSON.parse(response.body)
-    response_body["results"][0].slice("trackName",
-                "description",
-                "artworkUrl60",
-                "sellerName",
-                "price",
-                "version",
-                "averageUserRating")
-    
+    response_body["results"][0]
   end
 end
