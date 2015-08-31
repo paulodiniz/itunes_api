@@ -19,5 +19,12 @@ RSpec.describe 'AppData', :type => :model do
         })
       end
     end
+
+    it 'must take an array of ids' do
+      VCR.use_cassette '458225159_348618445_526831380' do
+        app_data = AppData.for(458225159, 348618445, 526831380)
+        expect(app_data.count).to eql 3
+      end
+    end
   end
 end
