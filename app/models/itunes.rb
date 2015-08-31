@@ -30,32 +30,34 @@ class Itunes
   end
 
   def top_apps
-    return cache_value if cache_value
-    result = top_apps_ids.map { |app_id| AppData.for(app_id) }
-    Rails.cache.write(cache_key, result)
-    return result
+    AppData.for(top_apps_ids)
   end
 
   def on_rank(rank = 1)
     app = top_apps_ids[rank - 1]
-    return AppData.for(app)
+    return AppData.for(app).first
   end
 
 
   def top_publishers
-    top_publishers_count.map do |artist_id, number_of_apps|
-      AppData.for(artist_id).merge("numberOfApps" => number_of_apps)
+    publishers_stats = top_publishers_stats
+    result = AppData.for(publishers_stats.keys)
+
+    result.each do |publisher_data|
+      publisher_id = publisher_data["artistId"]
+      publisher_data.merge!('numberOfApps' => publishers_stats[publisher_id])
     end
+    result
   end
 
-  def top_publishers_count
+  def top_publishers_stats
     publishers_count = {}
     top_apps.each do |app|
       artist_id = app["artistId"]
       publishers_count[artist_id] = 0 if publishers_count[artist_id].nil?
       publishers_count[artist_id] += 1
     end
-    publishers_count.sort_by { |k,v| v}.reverse
+    publishers_count
   end
 
   private

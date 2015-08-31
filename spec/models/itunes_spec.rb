@@ -41,8 +41,8 @@ RSpec.describe 'Itunes', :type => :model do
         itunes = Itunes.new(category_id: 6003, monetization: :paid)
         paid_apps = itunes.top_apps
         expect(paid_apps.first["sellerName"]).to eql  "Flightradar24 AB"
-        expect(paid_apps.second["sellerName"]).to eql "Xco Software LLC"
-        expect(paid_apps.last["sellerName"]).to eql   "TripBucket Inc"
+        expect(paid_apps.second["sellerName"]).to eql "Dave Pascoe"
+        expect(paid_apps.last["sellerName"]).to eql   "GPSmyCity.com, Inc."
       end
     end
 
@@ -52,7 +52,7 @@ RSpec.describe 'Itunes', :type => :model do
         free_apps = itunes.top_apps
         expect(free_apps.first["sellerName"]).to eql  "Uber Technologies, Inc."
         expect(free_apps.second["sellerName"]).to eql "Yelp, Inc."
-        expect(free_apps.last["sellerName"]).to eql   "AIR FRANCE"
+        expect(free_apps.last["sellerName"]).to eql   "AITA LIMITED"
 
         first_app = free_apps.first["368677368"]
       end
@@ -64,7 +64,7 @@ RSpec.describe 'Itunes', :type => :model do
         grossing_apps = itunes.top_apps
         expect(grossing_apps.first["sellerName"]).to eql  "Flightradar24 AB"
         expect(grossing_apps.second["sellerName"]).to eql "AllTrails, Inc."
-        expect(grossing_apps.last["sellerName"]).to eql   "medianet"
+        expect(grossing_apps.last["sellerName"]).to eql   "codegent ltd"
       end
     end
   end
@@ -72,7 +72,7 @@ RSpec.describe 'Itunes', :type => :model do
   describe '#on_rank' do
     it 'must return only one app description' do
       itunes = Itunes.new(category_id: 6003, monetization: :free)
-      VCR.use_cassette 'top_free_6003' do
+      VCR.use_cassette 'rank_1_free_6003' do
         first = itunes.on_rank(1)
         expect(first).to be_a Hash
       end
@@ -81,19 +81,25 @@ RSpec.describe 'Itunes', :type => :model do
 
   describe '#top_publishers' do
 
-    let(:fake_data) do
-      [{ "version" => 2, "artistId" => '501285606' },
-      { "version" => 3, "artistId" => '368677371' },
-      { "version" => 6, "artistId" => '501285606' }]
+    let(:stats_data) do
+      {368677371 => 4, 501285606 => 2}
     end
 
-    it 'must agregate by sellerName' do
-      itunes = Itunes.new(category_id: 6003, monetization: :free)
-      allow(itunes).to receive(:top_apps).and_return fake_data
-      response = itunes.top_publishers
+     it 'must agregate by sellerName' do
+      VCR.use_cassette '501285606_368677371' do
+        itunes = Itunes.new(category_id: 6003, monetization: :free)
+        allow(itunes).to receive(:top_publishers_stats).and_return stats_data
+        response = itunes.top_publishers
+        
+        expect(response.first["numberOfApps"]).to eql 4
+        expect(response.second["numberOfApps"]).to eql 2
+      end
       
-      expect(response.first["numberOfApps"]).to eql 2
-      expect(response.second["numberOfApps"]).to eql 1
+    end
+
+    it '' do
+      itunes = Itunes.new(category_id: 6003, monetization: :free)
+      response = itunes.top_publishers
     end
   end
 end
