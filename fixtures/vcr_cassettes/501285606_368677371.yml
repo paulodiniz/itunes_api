@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://itunes.apple.com/lookup?id=368677371,501285606
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Apple-Jingle-Correlation-Key:
+      - HAF4RF3ZVNQ4Q3T6CPOTLANP6Y
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Apple-Translated-Wo-Url:
+      - "/WebObjects/MZStoreServices.woa/ws/wsLookup?id=368677371%2C501285606&urlDesc="
+      X-Apple-Orig-Url:
+      - https://itunes.apple.com/lookup?id=368677371%2C501285606
+      X-Apple-Application-Site:
+      - ST11
+      Apple-Timing-App:
+      - 6 ms
+      Content-Type:
+      - text/javascript; charset=utf-8
+      X-Apple-Application-Instance:
+      - '2000518'
+      X-Webobjects-Loadaverage:
+      - '0'
+      Server:
+      - ATS/4.1.0
+      X-Apple-Ats-Cache-Key:
+      - "/17.173.38.169/80/lookup/browser/https?id=368677371%2C501285606"
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-transform, max-age=41
+      Date:
+      - Mon, 31 Aug 2015 23:50:32 GMT
+      Content-Length:
+      - '585'
+      Connection:
+      - keep-alive
+      X-Apple-Partner:
+      - origin.0
+    body:
+      encoding: UTF-8
+      string: "\n\n\n{\n \"resultCount\":2,\n \"results\": [\n{\"wrapperType\":\"artist\",
+        \"artistType\":\"Software Artist\", \"artistName\":\"Uber Technologies, Inc.\",
+        \"artistLinkUrl\":\"https://itunes.apple.com/us/developer/uber-technologies-inc./id368677371?uo=4\",
+        \"artistId\":368677371, \"radioStationUrl\":\"https://itunes.apple.com/station/idra.368677371\"},
+        \n{\"wrapperType\":\"artist\", \"artistType\":\"Software Artist\", \"artistName\":\"TXTVault\",
+        \"artistLinkUrl\":\"https://itunes.apple.com/us/developer/txtvault/id501285606?uo=4\",
+        \"artistId\":501285606, \"radioStationUrl\":\"https://itunes.apple.com/station/idra.501285606\"}]\n}\n\n\n"
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 23:50:33 GMT
+recorded_with: VCR 2.9.3

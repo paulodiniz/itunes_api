@@ -1,0 +1,226 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?dataOnly=true&genreId=6003&l=en&popId=30
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip, deflate, sdch
+      Accept-Language:
+      - en-US,en;q=0.8,lv;q=0.6
+      User-Agent:
+      - iTunes/11.1.1 (Windows; Microsoft Windows 7 x64 Ultimate Edition Service Pack
+        1 (Build 7601)) AppleWebKit/536.30.1
+      Accept:
+      - text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+      Cache-Control:
+      - max-age=0
+      X-Apple-Store-Front:
+      - 143441-1,17
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Last-Modified:
+      - Mon, 31 Aug 2015 23:53:34 GMT
+      X-Frame-Options:
+      - SAMEORIGIN
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Apple-Translated-Wo-Url:
+      - "/WebObjects/MZStore.woa/wa/viewTop?genreId=6003&popId=30&dataOnly=true&l=en"
+      X-Apple-Orig-Url:
+      - https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?genreId=6003&popId=30&dataOnly=true&l=en
+      X-Apple-Application-Site:
+      - ST11
+      Apple-Timing-App:
+      - 1035 ms
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Apple-Application-Instance:
+      - '2125033'
+      X-Apple-Aka-Ttl:
+      - Generated Mon Aug 31 16:53:34 PDT 2015, Expires Mon Aug 31 16:54:34 PDT 2015,
+        TTL 60s
+      X-Webobjects-Loadaverage:
+      - '0'
+      X-Apple-Jingle-Correlation-Key:
+      - FSVLUZBIZJ5M52GRVTDWTBBN7U
+      Content-Length:
+      - '3907'
+      Server:
+      - ATS/4.1.0
+      X-Apple-Ats-Cache-Key:
+      - "/17.173.38.164/80/WebObjects/MZStore.woa/wa/viewTop/iDevice/143441-1/17/https?dataOnly=true&genreId=6003&l=en&popId=30"
+      Cache-Control:
+      - no-transform, max-age=51
+      Date:
+      - Mon, 31 Aug 2015 23:53:43 GMT
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      - X-Apple-Store-Front
+      X-Apple-Partner:
+      - origin.0
+    body:
+      encoding: UTF-8
+      string: '{"footerCrumbs":[{"label":"iTunes Store","url":"https://itunes.apple.com/us/store"},{"label":"App
+        Store","url":"https://itunes.apple.com/us/genre/ios/id36?mt=8"},{"label":"Travel","url":"https://itunes.apple.com/us/genre/ios-travel/id6003?mt=8"},{"label":"Top
+        Paid iPhone Apps","url":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=6003&popId=30"}],"allGenresUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=36&popId=30","genre":{"name":"Travel","id":"6003","url":"https://itunes.apple.com/us/genre?id=6003"},"topCharts":[{"adamIds":["382069612","563910324","317809458","415186905","370820516","545498325","338227344","435871950","543032054","327783342","347393479","337841739","435741813","650684932","716913565","431462560","453737545","390553006","352818407","578451869","301763541","844099556","912061441","536956874","545166457","390039844","910570079","310516332","885297713","323470584","398391903","353096339","982839825","1031536203","297404959","520338005","412991664","357421934","424433686","633130545","984151475","933997029","584620730","548248249","887138564","620006490","856474365","311277347","334194705","535960556","502927848","323374595","365237650","654806302","658162704","651649061","583654750","939674590","578453078","317038790","358999328","374341341","442272286","891362701","432042668","586015472","635102923","698323700","561352659","654614050","504689469","772358843","995895082","1028978496","438401655","368177365","375670004","882607297","949169216","1006028570","359957202","387214656","383975182","454642353","329365486","360092516","335891571","506650515","385156722","469992798","356367466","598325421","379852725","670521498","300110834","412526776","415423586","456952890","644849461","454754913","640273483","328032543","582896596","415587551","806077158","611586505","835682385","476642669","464777293","433735327","538820217","719703524","688037240","446369251","834179613","648989073","562146212","388488613","636075147","403992923","657761828","951366301","462962490","406844322","773102370","377391554","643060806","454897586","687667017","767693520","997589911","1019135618","414734650","373296739","1006024911","677076123","528247216","1006030091","506760190","896583090","395332488","522551840","301912130","407695879","312266675","377295652","723185418","455138743","914291915","644716272","497462835","437148054","669398769","457469128","367820478","454760679","721094424","738331344","404643224","322395516","317703490","438611185","415478066","426329719","496694432","630141605","294892942","348131804","668824734","565105760","469407032","294730339","326707710","671684136","449091363","512492307","372419544","914448240","490514093","598967192","953333522","391573951","296474127","322962700","402348384","323121197","649287658","672979566","950258805","971368319","355860388","689600409","295446978","444819543","957016113","406845187","312528655","312109511","308607069","294802541"],"seeAllUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=6003&popId=30","kinds":{"iosSoftware":true},"shortTitle":"Paid","id":"30","title":"Top
+        Paid iPhone Apps","isTracklistChart":false},{"adamIds":["368677368","284910350","293622097","529379082","406719683","284876795","449945214","388491656","401626263","344542975","427916203","284971959","382698565","367003839","635150066","455004730","548925969","547436543","407690035","405074003","491450511","305204535","642441300","369691844","904052407","481370590","336381998","528413490","1022164656","376888389","1009534692","315241195","555063314","444529922","415458524","566635048","399057337","510623322","672188283","743784099","356143077","436858222","403546234","552594442","368217298","448474183","316793974","284803487","451314284","930656366","589549928","309620151","453761271","311035142","572700574","405075943","284806204","567264775","449655162","983085413","312306003","352114300","434832826","944060491","329384702","416341948","956373738","365817457","751096907","878217080","675304115","931612822","823443083","454364785","773105628","438142806","985019241","606870241","408866084","525588154","560487958","372038569","551367321","592978487","306752957","988953433","880759727","806187209","991384615","1000558562","284793089","900109792","647268330","299219152","491934966","953579075","671153791","539179365","382233851","463240522","990874361","935307149","943490654","724915219","962532589","523025208","925117977","907024887","501324867","492680525","308342527","895660292","476574483","952466009","329686864","478334807","1011110220","469326959","524617679","636875425","386648039","380449520","570156001","800989983","925452533","414357125","321601474","660938854","945390888","509342785","377133767","341329033","903247390","549019596","657777015","736924592","392264578","687242690","326459697","594352566","570625667","331771613","531324961","634309682","527534137","757322195","401746066","786203885","525642917","955356588","604906412","320969612","952459926","476639005","419950680","853926670","919159947","508487044","477755570","673970506","640432720","507110891","421276073","299226386","483568103","599138866","474259675","348890820","680520990","289814055","687943985","553663691","561507659","528988698","516387951","700513113","464426407","411134124","554499054","506426310","596546023","868213517","514921710","547320928","538787758","452815667","440676901","682820712","379395415","504270602","1010274069","326862399","427791197","343555245","529037717","387209224","391968627","916219288","347564786","527299553"],"seeAllUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=6003&popId=27","kinds":{"iosSoftware":true},"shortTitle":"Free","id":"27","title":"Top
+        Free iPhone Apps","isTracklistChart":false},{"adamIds":["382069612","405075943","415186905","685014186","370820516","563910324","311035142","317809458","650684932","646368973","543032054","431462560","347393479","327783342","527299553","598325421","997589911","716913565","912061441","435871950","323470584","398391903","920482772","545498325","814596586","365817457","605447532","966722476","578451869","411091283","982839825","853926670","337841739","453737545","390553006","487077174","578453078","422547188","386308647","496553371","447047877","323374595","850253208","487064887","654614050","334194705","352818407","646553835","844099556","984151475","636875425","536956874","338227344","586015472","518426085","417207307","570036360","412991664","316793974","843792262","390039844","914961840","382411090","311277347","535960556","357421934","476574483","416341948","956373738","856474365","596556793","825306842","806077158","317038790","520338005","442272286","467999426","772358843","654949336","609441225","365237650","545166457","424433686","633130545","360092516","335891571","329365486","356367466","311557053","657761828","980252854","727593169","677076123","955093624","487249786","887138564","435741813","317703490","910570079","496038103","957320762","891362701","467053028","698323700","547171665","408866084","995895082","301763541","353096339","996091875","506650515","924710586","387214656","640273483","446369251","899757264","506760190","572700574","651649061","518686661","395332488","933997029","322962700","1014971295","635102923","323121197","548248249","666443137","886455839","392264578","536624091","437148054","368177365","882607297","307754293","990874361","696726953","430676177","379852725","367820478","487070753","582896596","835682385","398967651","388488613","636075147","373296739","528247216","496694432","502927848","497462835","294892942","658162704","630141605","312266675","957016113","672524650","738331344","854039701","310516332","885297713","723185418","642136640","432042668","575671663","455138743","504689469","1028978496","404643224","320969612","572106982","523025208","375670004","597337017","955356588","359957202","383975182","385156722","454754913","412526776","469992798","415423586","456952890","644849461","464777293","719703524","834179613","377391554","687667017","773102370","643060806","414734650","1031536203","766375562","317778729","449091363","451116472","297404959","522551840","990452649"],"seeAllUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=6003&popId=38","kinds":{"iosSoftware":true},"shortTitle":"Top
+        Grossing","id":"38","title":"Top Grossing iPhone Apps","isTracklistChart":false}],"selectedChart":{"adamIds":["382069612","563910324","317809458","415186905","370820516","545498325","338227344","435871950","543032054","327783342","347393479","337841739","435741813","650684932","716913565","431462560","453737545","390553006","352818407","578451869","301763541","844099556","912061441","536956874","545166457","390039844","910570079","310516332","885297713","323470584","398391903","353096339","982839825","1031536203","297404959","520338005","412991664","357421934","424433686","633130545","984151475","933997029","584620730","548248249","887138564","620006490","856474365","311277347","334194705","535960556","502927848","323374595","365237650","654806302","658162704","651649061","583654750","939674590","578453078","317038790","358999328","374341341","442272286","891362701","432042668","586015472","635102923","698323700","561352659","654614050","504689469","772358843","995895082","1028978496","438401655","368177365","375670004","882607297","949169216","1006028570","359957202","387214656","383975182","454642353","329365486","360092516","335891571","506650515","385156722","469992798","356367466","598325421","379852725","670521498","300110834","412526776","415423586","456952890","644849461","454754913","640273483","328032543","582896596","415587551","806077158","611586505","835682385","476642669","464777293","433735327","538820217","719703524","688037240","446369251","834179613","648989073","562146212","388488613","636075147","403992923","657761828","951366301","462962490","406844322","773102370","377391554","643060806","454897586","687667017","767693520","997589911","1019135618","414734650","373296739","1006024911","677076123","528247216","1006030091","506760190","896583090","395332488","522551840","301912130","407695879","312266675","377295652","723185418","455138743","914291915","644716272"],"seeAllUrl":"https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewTop?cc=us&genreId=6003&popId=30","kinds":{"iosSoftware":true},"shortTitle":"Paid","id":"30","title":"Top
+        Paid iPhone Apps","isTracklistChart":false},"navTitle":"Top Charts","genres":[{"name":"Books","id":"6018","url":"https://itunes.apple.com/us/genre?id=6018"},{"name":"Business","id":"6000","url":"https://itunes.apple.com/us/genre?id=6000"},{"name":"Catalogs","id":"6022","url":"https://itunes.apple.com/us/genre?id=6022"},{"name":"Education","id":"6017","url":"https://itunes.apple.com/us/genre?id=6017"},{"name":"Entertainment","id":"6016","url":"https://itunes.apple.com/us/genre?id=6016"},{"name":"Finance","id":"6015","url":"https://itunes.apple.com/us/genre?id=6015"},{"name":"Food
+        & Drink","id":"6023","url":"https://itunes.apple.com/us/genre?id=6023"},{"name":"Games","id":"6014","url":"https://itunes.apple.com/us/genre?id=6014"},{"name":"Health
+        & Fitness","id":"6013","url":"https://itunes.apple.com/us/genre?id=6013"},{"name":"All
+        Ages","ageBandId":0,"id":"36","ageBandGenreName":"Kids"},{"name":"Lifestyle","id":"6012","url":"https://itunes.apple.com/us/genre?id=6012"},{"name":"Medical","id":"6020","url":"https://itunes.apple.com/us/genre?id=6020"},{"name":"Music","id":"6011","url":"https://itunes.apple.com/us/genre?id=6011"},{"name":"Navigation","id":"6010","url":"https://itunes.apple.com/us/genre?id=6010"},{"name":"News","id":"6009","url":"https://itunes.apple.com/us/genre?id=6009"},{"name":"Newsstand","id":"6021","url":"https://itunes.apple.com/us/genre?id=6021"},{"name":"Photo
+        & Video","id":"6008","url":"https://itunes.apple.com/us/genre?id=6008"},{"name":"Productivity","id":"6007","url":"https://itunes.apple.com/us/genre?id=6007"},{"name":"Reference","id":"6006","url":"https://itunes.apple.com/us/genre?id=6006"},{"name":"Social
+        Networking","id":"6005","url":"https://itunes.apple.com/us/genre?id=6005"},{"name":"Sports","id":"6004","url":"https://itunes.apple.com/us/genre?id=6004"},{"name":"Travel","id":"6003","url":"https://itunes.apple.com/us/genre?id=6003"},{"name":"Utilities","id":"6002","url":"https://itunes.apple.com/us/genre?id=6002"},{"name":"Weather","id":"6001","url":"https://itunes.apple.com/us/genre?id=6001"}]}'
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 23:53:43 GMT
+- request:
+    method: get
+    uri: https://itunes.apple.com/lookup?id=368677368
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Apple-Jingle-Correlation-Key:
+      - SOCEOS46U3ADWWGATJP5E7F4QI
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Apple-Translated-Wo-Url:
+      - "/WebObjects/MZStoreServices.woa/ws/wsLookup?id=368677368&urlDesc="
+      X-Apple-Orig-Url:
+      - https://itunes.apple.com/lookup?id=368677368
+      X-Apple-Application-Site:
+      - ST11
+      Apple-Timing-App:
+      - 26 ms
+      Content-Type:
+      - text/javascript; charset=utf-8
+      X-Apple-Application-Instance:
+      - '2000437'
+      X-Webobjects-Loadaverage:
+      - '0'
+      Server:
+      - ATS/4.1.0
+      X-Apple-Ats-Cache-Key:
+      - "/17.173.38.167/80/lookup/browser/https?id=368677368"
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-transform, max-age=59
+      Date:
+      - Mon, 31 Aug 2015 23:53:44 GMT
+      Content-Length:
+      - '3601'
+      Connection:
+      - keep-alive
+      X-Apple-Partner:
+      - origin.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        CgoKewogInJlc3VsdENvdW50IjoxLAogInJlc3VsdHMiOiBbCnsiYXJ0aXN0
+        Vmlld1VybCI6Imh0dHBzOi8vaXR1bmVzLmFwcGxlLmNvbS91cy9kZXZlbG9w
+        ZXIvdWJlci10ZWNobm9sb2dpZXMtaW5jLi9pZDM2ODY3NzM3MT91bz00Iiwg
+        ImFydHdvcmtVcmw2MCI6Imh0dHA6Ly9pczMubXpzdGF0aWMuY29tL2ltYWdl
+        L3RodW1iL1B1cnBsZTcvdjQvYmEvOTQvMTEvYmE5NDExMjEtNTcwYy05NmNi
+        LWVlYTktMGExNDQ2NDQzMDhlL0ljb24ucG5nLzB4MHNzLTg1LmpwZyIsIAoi
+        c2NyZWVuc2hvdFVybHMiOlsiaHR0cDovL2EyLm16c3RhdGljLmNvbS91cy9y
+        MzAvUHVycGxlNy92NC80OC80YS8zMi80ODRhMzI3NS1mOTg4LWI1NWEtOTA3
+        Yi01MmQwODZmZDQ3Y2Qvc2NyZWVuMTEzNngxMTM2LmpwZWciLCAiaHR0cDov
+        L2E1Lm16c3RhdGljLmNvbS91cy9yMzAvUHVycGxlNy92NC84OS84NS9mNC84
+        OTg1ZjQ0Yi0yNzEwLWU3NGEtMWJhOC0xYjJlOTMzYjFhZTQvc2NyZWVuMTEz
+        NngxMTM2LmpwZWciLCAiaHR0cDovL2EyLm16c3RhdGljLmNvbS91cy9yMzAv
+        UHVycGxlMS92NC8xNy8wYi9hMS8xNzBiYTE1OC0wZTZhLWZkYzMtYmY2Yi02
+        YjU0ZDU0M2IxOGIvc2NyZWVuMTEzNngxMTM2LmpwZWciLCAiaHR0cDovL2Ez
+        Lm16c3RhdGljLmNvbS91cy9yMzAvUHVycGxlNy92NC81Yi8yMy9lZS81YjIz
+        ZWUwOC05ZmYyLTZhYTMtMWE4NS0xYTk1ZWI3OTQ4ZDMvc2NyZWVuMTEzNngx
+        MTM2LmpwZWciLCAiaHR0cDovL2E1Lm16c3RhdGljLmNvbS91cy9yMzAvUHVy
+        cGxlMS92NC9lMC9mYy85ZS9lMGZjOWViYS02MDM1LTg4ODUtMTk2My1mYWIz
+        NzAzOTg0MDIvc2NyZWVuMTEzNngxMTM2LmpwZWciXSwgImlwYWRTY3JlZW5z
+        aG90VXJscyI6W10sICJhcnR3b3JrVXJsNTEyIjoiaHR0cDovL2lzNS5tenN0
+        YXRpYy5jb20vaW1hZ2UvdGh1bWIvUHVycGxlNjkvdjQvNmYvOWEvMjcvNmY5
+        YTI3Y2UtOTU2YS1kOWEwLTI0ODUtNzllOWU5NjE1MDcwL216bC5ra2d0d3Rm
+        dC5wbmcvMHgwc3MtODUuanBnIiwgImtpbmQiOiJzb2Z0d2FyZSIsICJmZWF0
+        dXJlcyI6W10sICJhZHZpc29yaWVzIjpbXSwgCiJzdXBwb3J0ZWREZXZpY2Vz
+        IjpbImlQYWRNaW5pIiwgImlQYWRNaW5pNEciLCAiaVBvZFRvdWNoRmlmdGhH
+        ZW4iLCAiaVBhZDJXaWZpIiwgImlQYWRGb3VydGhHZW4iLCAiaVBob25lNlBs
+        dXMiLCAiaVBob25lNSIsICJpUGhvbmU1cyIsICJpUGFkVGhpcmRHZW40RyIs
+        ICJpUGhvbmU0UyIsICJpUGFkRm91cnRoR2VuNEciLCAiaVBhZDIzRyIsICJp
+        UGhvbmU2IiwgImlQaG9uZTQiLCAiaVBvZFRvdWNoU2l4dGhHZW4iLCAiaVBh
+        ZFRoaXJkR2VuIiwgImlQaG9uZTVjIl0sICJpc0dhbWVDZW50ZXJFbmFibGVk
+        IjpmYWxzZSwgInRyYWNrQ2Vuc29yZWROYW1lIjoiVWJlciIsICJ0cmFja1Zp
+        ZXdVcmwiOiJodHRwczovL2l0dW5lcy5hcHBsZS5jb20vdXMvYXBwL3ViZXIv
+        aWQzNjg2NzczNjg/bXQ9OCZ1bz00IiwgImNvbnRlbnRBZHZpc29yeVJhdGlu
+        ZyI6IjQrIiwgImFydHdvcmtVcmwxMDAiOiJodHRwOi8vaXM1Lm16c3RhdGlj
+        LmNvbS9pbWFnZS90aHVtYi9QdXJwbGU2OS92NC82Zi85YS8yNy82ZjlhMjdj
+        ZS05NTZhLWQ5YTAtMjQ4NS03OWU5ZTk2MTUwNzAvbXpsLmtrZ3R3dGZ0LnBu
+        Zy8weDBzcy04NS5qcGciLCAKImxhbmd1YWdlQ29kZXNJU08yQSI6WyJBUiIs
+        ICJBWiIsICJOQiIsICJCRyIsICJIUiIsICJDUyIsICJEQSIsICJOTCIsICJF
+        TiIsICJFVCIsICJGSSIsICJGUiIsICJERSIsICJFTCIsICJIRSIsICJIVSIs
+        ICJJRCIsICJJVCIsICJKQSIsICJLTyIsICJMViIsICJMVCIsICJNUyIsICJQ
+        TCIsICJQVCIsICJSTyIsICJSVSIsICJaSCIsICJTSyIsICJTTCIsICJFUyIs
+        ICJTViIsICJUSCIsICJaSCIsICJUUiIsICJWSSJdLCAiZmlsZVNpemVCeXRl
+        cyI6IjUyMzU2MTk0IiwgInNlbGxlclVybCI6Imh0dHBzOi8vdWJlci5jb20i
+        LCAiYXZlcmFnZVVzZXJSYXRpbmdGb3JDdXJyZW50VmVyc2lvbiI6NS4wLCAi
+        dXNlclJhdGluZ0NvdW50Rm9yQ3VycmVudFZlcnNpb24iOjI0LCAidHJhY2tD
+        b250ZW50UmF0aW5nIjoiNCsiLCAiY3VycmVuY3kiOiJVU0QiLCAid3JhcHBl
+        clR5cGUiOiJzb2Z0d2FyZSIsICJ2ZXJzaW9uIjoiMi45My4yIiwgImFydGlz
+        dElkIjozNjg2NzczNzEsICJhcnRpc3ROYW1lIjoiVWJlciBUZWNobm9sb2dp
+        ZXMsIEluYy4iLCAiZ2VucmVzIjpbIlRyYXZlbCIsICJMaWZlc3R5bGUiXSwg
+        InByaWNlIjowLjAwLCAKImRlc2NyaXB0aW9uIjoiVWJlciBpcyB5b3VyIHBy
+        aXZhdGUgZHJpdmVyIGluIG1vcmUgdGhhbiA1MCBjb3VudHJpZXMuXG5cbi0g
+        UmVxdWVzdCBhIHJpZGUgdXNpbmcgdGhlIGFwcCBhbmQgZ2V0IHBpY2tlZCB1
+        cCB3aXRoaW4gbWludXRlcy4gT24tZGVtYW5kIHNlcnZpY2UgbWVhbnMgbm8g
+        cmVzZXJ2YXRpb25zIHJlcXVpcmVkIGFuZCBubyB3YWl0aW5nIGluIHRheGkg
+        bGluZXMuXG5cbi0gQ29tcGFyZSByYXRlcyBmb3IgZGlmZmVyZW50IHZlaGlj
+        bGVzIGFuZCBnZXQgZmFyZSBxdW90ZXMgaW4gdGhlIGFwcC4gVXNlIFBheVBh
+        bCBvciBhZGQgYSBjcmVkaXQgY2FyZCB0byB5b3VyIHNlY3VyZSBhY2NvdW50
+        IHNvIHlvdSBuZXZlciBuZWVkIGNhc2ggb24gaGFuZC5cblxuLSBTZXQgeW91
+        ciBwaWNrdXAgbG9jYXRpb24gYW5kIGZpbmFsIGRlc3RpbmF0aW9uIGZvciBh
+        biBlYXN5IHRyaXAuIEdldCBjb25uZWN0ZWQgdG8geW91ciBwZXJzb25hbCBk
+        cml2ZXIgYW5kIGNoZWNrIHRoZSBwcm9ncmVzcyBvZiB5b3VyIFViZXIgYXQg
+        YW55IHRpbWUuXG5cbi0gU2l0IGJhY2ssIHJlbGF4LCBhbmQgZ28gYW55d2hl
+        cmUgeW91IHdhbnQuIFdlJ2xsIGVtYWlsIHlvdSBhIHJlY2VpcHQgd2hlbiB5
+        b3UgYXJyaXZlIGF0IHlvdXIgZGVzdGluYXRpb24uXG5cbkFuIGVudGlyZWx5
+        IG5ldyBhbmQgbW9kZXJuIHdheSB0byB0cmF2ZWwgaXMgYXQgeW91ciBmaW5n
+        ZXJ0aXBzLiIsICJnZW5yZUlkcyI6WyI2MDAzIiwgIjYwMTIiXSwgInJlbGVh
+        c2VEYXRlIjoiMjAxMC0wNS0yMVQwMzoxMToyM1oiLCAic2VsbGVyTmFtZSI6
+        IlViZXIgVGVjaG5vbG9naWVzLCBJbmMuIiwgImJ1bmRsZUlkIjoiY29tLnVi
+        ZXJjYWIuVWJlckNsaWVudCIsIAoicmVsZWFzZU5vdGVzIjoiV2XigJl2ZSBt
+        YWRlIGRlc2lnbiBhbmQgbG9jYWxpemF0aW9uIHVwZGF0ZXMgdG8gaW1wcm92
+        ZSB0aGUgVWJlciBleHBlcmllbmNlIGFyb3VuZCB0aGUgZ2xvYmUuXG5cbioq
+        IFViZXIgc2F2ZXMgdGltZSBieSBjb25uZWN0aW5nIHlvdSB0byBhIGRyaXZl
+        ciBhcyBxdWlja2x5IGFzIHBvc3NpYmxlLiBJZiB5b3UgbGlrZSB0aGUgc2Vy
+        dmljZSwgcGxlYXNlIGNvbnNpZGVyIHVzaW5nIHRob3NlIGV4dHJhIGZldyBt
+        aW51dGVzIHRvIHJldmlldyBvdXIgYXBwLiAqKiIsICJ0cmFja0lkIjozNjg2
+        NzczNjgsICJ0cmFja05hbWUiOiJVYmVyIiwgInByaW1hcnlHZW5yZU5hbWUi
+        OiJUcmF2ZWwiLCAicHJpbWFyeUdlbnJlSWQiOjYwMDMsICJpc1ZwcERldmlj
+        ZUJhc2VkTGljZW5zaW5nRW5hYmxlZCI6dHJ1ZSwgIm1pbmltdW1Pc1ZlcnNp
+        b24iOiI3LjAiLCAiZm9ybWF0dGVkUHJpY2UiOiJGcmVlIiwgImF2ZXJhZ2VV
+        c2VyUmF0aW5nIjo0LjAsICJ1c2VyUmF0aW5nQ291bnQiOjIwMzg1fV0KfQoK
+        Cg==
+    http_version: 
+  recorded_at: Mon, 31 Aug 2015 23:53:44 GMT
+recorded_with: VCR 2.9.3
