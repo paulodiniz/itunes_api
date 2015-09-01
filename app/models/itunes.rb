@@ -42,22 +42,28 @@ class Itunes
     result = []
     top_apps.each_with_index do |app, index|
       artist_id = app["artistId"]
-
       app_hash = result.detect { |app_hash| app_hash["artistId"] == artist_id}
 
       if app_hash
         app_hash["appNames"] << app["trackName"]
       else
-        result << { "artistName" => app["artistName"], 
-                    "artistId"   => app["artistId"],
-                    "appNames"   => [app["trackName"]],
-                    "rank"       => index + 1}
+        result << artist_from_app(app, index)
       end
     end
     result
   end
 
   private
+
+  def artist_from_app(app, index)
+    { 
+      "artistName" => app["artistName"], 
+      "artistId"   => app["artistId"],
+      "appNames"   => [app["trackName"]],
+      "rank"       => index + 1
+    }
+  end
+
 
   def cache_key
     "top-#{@category_id}-#{@monetization}"
