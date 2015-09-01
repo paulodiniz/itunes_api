@@ -85,21 +85,48 @@ RSpec.describe 'Itunes', :type => :model do
       {368677371 => 4, 501285606 => 2}
     end
 
-     it 'must agregate by sellerName' do
-      VCR.use_cassette '501285606_368677371' do
-        itunes = Itunes.new(category_id: 6003, monetization: :free)
-        allow(itunes).to receive(:top_publishers_stats).and_return stats_data
-        response = itunes.top_publishers
-        
-        expect(response.first["numberOfApps"]).to eql 4
-        expect(response.second["numberOfApps"]).to eql 2
-      end
-      
+    let(:fake_data) do
+      [{
+        "version" => 3,
+        "artistId"  => 431865278,
+        "artistName" => "BlooJeans",
+        "price"     => 2.99,
+        "trackName" => "The JMU Bus App"
+      },
+      {
+        "version" => 1,
+        "artistId"  => 292242506,
+        "artistName" => "Groundspeak Inc.",
+        "price"     => 9.99,
+        "trackName" => "Geocaching"
+      },
+      {
+        "version" => 9,
+        "artistId"  => 431865278,
+        "artistName" => "BlooJeans",
+        "price"     => 2.99,
+        "trackName" => "Where's my MBTA Bus?"
+      }]
     end
 
-    it '' do
-      itunes = Itunes.new(category_id: 6003, monetization: :free)
-      response = itunes.top_publishers
+    it 'must asseble from the top_apps' do
+      itunes = Itunes.new
+      allow(itunes).to receive(:top_apps).and_return fake_data
+      top_publishers = itunes.top_publishers
+      expect(top_publishers).to eql([
+        { "artistName" => "BlooJeans",
+          "artistId" => 431865278,
+          "rank"     => 1,
+          "appNames" => ["The JMU Bus App", "Where's my MBTA Bus?"]
+          },
+        {
+          "artistName" => "Groundspeak Inc.",
+          "artistId" => 292242506,
+          "rank"     => 2,
+          "appNames" => ["Geocaching"]
+        }])
     end
+
+
   end
 end

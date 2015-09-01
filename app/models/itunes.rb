@@ -38,26 +38,23 @@ class Itunes
     return AppData.for(app).first
   end
 
-
   def top_publishers
-    publishers_stats = top_publishers_stats
-    result = AppData.for(publishers_stats.keys)
+    result = []
+    top_apps.each_with_index do |app, index|
+      artist_id = app["artistId"]
 
-    result.each do |publisher_data|
-      publisher_id = publisher_data["artistId"]
-      publisher_data.merge!('numberOfApps' => publishers_stats[publisher_id])
+      app_hash = result.detect { |app_hash| app_hash["artistId"] == artist_id}
+
+      if app_hash
+        app_hash["appNames"] << app["trackName"]
+      else
+        result << { "artistName" => app["artistName"], 
+                    "artistId"   => app["artistId"],
+                    "appNames"   => [app["trackName"]],
+                    "rank"       => index + 1}
+      end
     end
     result
-  end
-
-  def top_publishers_stats
-    publishers_count = {}
-    top_apps.each do |app|
-      artist_id = app["artistId"]
-      publishers_count[artist_id] = 0 if publishers_count[artist_id].nil?
-      publishers_count[artist_id] += 1
-    end
-    publishers_count
   end
 
   private
