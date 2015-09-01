@@ -81,10 +81,6 @@ RSpec.describe 'Itunes', :type => :model do
 
   describe '#top_publishers' do
 
-    let(:stats_data) do
-      {368677371 => 4, 501285606 => 2}
-    end
-
     let(:fake_data) do
       [{
         "version" => 3,
