@@ -78,7 +78,7 @@ class Itunes
   end
 
   def itunes_response
-    self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)
+    @itunes_response ||= self.class.get('/WebObjects/MZStore.woa/wa/viewTop', options)
   end
 
   def monetization_id
