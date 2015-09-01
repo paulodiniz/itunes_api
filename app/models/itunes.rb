@@ -65,14 +65,6 @@ class Itunes
   end
 
 
-  def cache_key
-    "top-#{@category_id}-#{@monetization}"
-  end
-
-  def cache_value
-    Rails.cache.read(cache_key)
-  end
-
   def top_apps_ids
     itunes_response["topCharts"][monetization_id]["adamIds"]
   end
